@@ -94,7 +94,7 @@ public enum SharedConstants {
         ("Beige", "#F5F0E8"),
     ]
 
-    public static var availableFonts: [String] {
+    public static let availableFonts: [String] = {
         let preferred = [
             "Helvetica Neue", "Helvetica", "Arial", "Avenir", "Avenir Next",
             "Futura", "Gill Sans", "SF Pro", "SF Mono", "Menlo", "Monaco",
@@ -102,7 +102,7 @@ public enum SharedConstants {
         ]
         let available = Set(NSFontManager.shared.availableFontFamilies)
         return preferred.filter { available.contains($0) }
-    }
+    }()
 }
 
 // MARK: - NSColor Hex Helpers

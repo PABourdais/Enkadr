@@ -3,7 +3,7 @@ import SwiftUI
 enum Theme {
     // Core palette — derived from the app icon
     static let accent = Color(red: 0.91, green: 0.52, blue: 0.49)      // #E8847C
-    static let accentDark = Color(red: 0.78, green: 0.38, blue: 0.35)  // #C76159
+    static let accentDark = Color(red: 0.78, green: 0.38, blue: 0.35)  // #C76059
 
     // Backgrounds
     static let bg = Color(red: 0.11, green: 0.11, blue: 0.12)          // #1C1C1E
@@ -21,14 +21,14 @@ enum Theme {
 }
 
 struct AccentButtonStyle: ButtonStyle {
-    let disabled: Bool
+    @Environment(\.isEnabled) private var isEnabled
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .foregroundStyle(.white)
             .background(
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(disabled ? Theme.textTertiary : (configuration.isPressed ? Theme.accentDark : Theme.accent))
+                    .fill(!isEnabled ? Theme.textTertiary : (configuration.isPressed ? Theme.accentDark : Theme.accent))
             )
     }
 }
