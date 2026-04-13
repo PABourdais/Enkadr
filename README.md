@@ -1,12 +1,16 @@
+<h1 align="center">Enkadr</h1>
+
+<div align="center">
 <p align="center">
   <img src="Enkadr/Assets.xcassets/AppIcon.appiconset/icon_256x256.png" width="128" alt="Enkadr">
 </p>
-
-<h1 align="center">Enkadr</h1>
-
-<p align="center">
-  A lightweight macOS app to add frames and borders to your photos. Built with SwiftUI.
-</p>
+<a href="https://github.com/PABourdais/Enkadr/releases/latest/download/Enkadr.dmg">
+  <img src="https://img.shields.io/badge/Download-Enkadr.dmg-black?style=for-the-badge&logo=apple&logoColor=white" alt="Download for Mac">
+</a>
+  <p>
+    A lightweight macOS app to add frames and borders to your photos. Built with SwiftUI.
+  </p>
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/macOS-14%2B-blue" alt="macOS 14+">
@@ -40,7 +44,12 @@ BMP, HEIC, JPEG, JPG, PNG, TIF, TIFF, WebP
 
 ### From GitHub Releases
 
-Download `Enkadr.dmg` from the [latest release](https://github.com/PABourdais/Enkadr/releases/latest), open it, and drag Enkadr to your Applications folder.
+1. Download [Enkadr.dmg](https://github.com/PABourdais/Enkadr/releases/latest/download/Enkadr.dmg)
+2. Open the `.dmg` file
+3. Drag **Enkadr** to your **Applications** folder
+4. Launch Enkadr from Applications
+
+> **Note:** On first launch, macOS may show a security warning since the app is not notarized. Go to **System Settings > Privacy & Security** and click **Open Anyway**.
 
 ### Build from source
 
@@ -74,3 +83,7 @@ All PRs must pass CI checks before being merged. The `main` branch is protected 
 - **CoreText** — Metadata text overlay
 - **ImageIO** — EXIF metadata reading & image encoding
 - **Swift Package Manager** — Build system
+
+## License
+
+MIT
